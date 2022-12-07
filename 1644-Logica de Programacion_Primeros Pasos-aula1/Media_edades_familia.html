@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>Media Edades Familia</title>
+</head>
+
+<script type="text/javascript">
+
+
+    function saltarLinea () {
+
+        document.write("<br><br>");
+    }
+
+         
+    function imprimeResultados(salida) {
+        
+        document.write(salida);
+        saltarLinea();
+    }
+
+
+    function calcularMediaEdades(numeroMiembros,) {
+
+        var contador = 1;
+        var edadesFamilia  = 0;
+
+        while(contador <= numeroMiembros) {
+
+            edadMiembros = Number.parseInt(prompt(nombre + ", ¿Cuál es la edad del miembro número " + (contador) + " ? "))
+            edadesFamilia = edadesFamilia + edadMiembros;
+            contador++
+        }
+
+        resultadoMediaEdades = edadesFamilia / numeroMiembros;
+
+        return(resultadoMediaEdades);
+
+    }
+
+
+    document.write("<h2>");
+    document.write("Programa que calcula la media de las edades de una familia");
+    document.write("</h2>");
+    saltarLinea();
+
+    
+    var nombre         = prompt("¿Como te llamas?");
+    var numeroMiembros = Number.parseInt(prompt(nombre + ", ¿Cuantos miembros son de tu familia' "));
+    
+    imprimeResultados(nombre + ", la media de edades de tu familia es : " + calcularMediaEdades(numeroMiembros));
+    
+    
+    
+  </script>  
