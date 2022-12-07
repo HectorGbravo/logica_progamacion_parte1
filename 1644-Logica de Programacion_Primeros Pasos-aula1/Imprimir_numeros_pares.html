@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>Imprime numeros pares del 1 al 100</title>
+</head>
+
+<script type="text/javascript">
+
+
+    function saltarLinea () {
+
+        document.write("<br><br>");
+    }
+
+         
+    function imprimeResultados(salida) {
+        
+        document.write(salida);
+         
+    }
+
+
+    var contador = 2
+
+
+
+    while (contador <= 100) {
+
+        imprimeResultados(contador + " ");
+        contador = contador +2;
+
+    }
+
+    imprimeResultados("FIN");
+
+</script>
