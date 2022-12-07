@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>Cálculo del IMC</title>
+</head>
+
+<script type="text/javascript">
+
+    function saltarLinea () {
+
+        document.write("<br><br>");
+    }
+
+         
+    function calcularImc (peso,altura) {
+
+        imc = peso / (altura * altura);
+
+        return (imc);
+
+    }
+
+    function imprimeResultados(salida) {
+        
+        document.write(salida);
+        saltarLinea();
+    }
+
+    function definirImc(imc) {
+
+        if (imc < 18.5) {
+
+            diagnosticoImc = " debajo de lo normal";
+
+        } else {
+
+            if (imc >= 18.5 && imc <= 24.9) {
+
+                diagnosticoImc = " normal";
+
+            } else { 
+
+                if (imc > 24.9 && imc <= 29.9) {
+
+                    diagnosticoImc = " sobrepeso";
+            
+                } else {
+
+                    diagnosticoImc = " obesidad";
+                }
+            }
+        }
+
+        return (diagnosticoImc);
+    }
+
+
+    
+    document.write("<h1>");
+    document.write("Programa para calcular el IMC corporal y obtener su diagnóstico");
+    document.write("</h1>");
+    saltarLinea();
+
+    var nombre    = prompt("¿Como te llamas?");
+    var peso      = Number.parseInt(prompt(nombre + " ¿Cuál es tu peso?"));
+    var altura    = Number.parseFloat(prompt(nombre + " ¿Cuál es tu altura?"));
+    
+    imcPersona = calcularImc(peso,altura);
+    imcPersona = imcPersona.toFixed(2);
+
+    resultadoDiagnosticoImc = definirImc(imcPersona);
+    
+    imprimeResultados("El IMC de "+ nombre + " actualmente es de:  " + (imcPersona));
+    imprimeResultados("El diagnóstico de acuerdo al IMC de " + nombre + " es : " + resultadoDiagnosticoImc);
+
+    
+  </script>  

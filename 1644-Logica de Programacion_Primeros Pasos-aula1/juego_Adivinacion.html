@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>Juego Adivinación</title>
+</head>
+
+<script type="text/javascript">
+
+
+    function saltarLinea () {
+
+        document.write("<br><br>");
+    }
+
+         
+    function imprimeResultados(salida) {
+        
+        document.write(salida);
+        saltarLinea();
+    }
+
+
+    function adivinarNumero(numeroUsuario,numeroComputadora) {
+
+        if (numeroUsuario == numeroComputadora) {
+
+            resultado = " Acertaste, efectivamente el número era " + numeroComputadora;
+
+        } else {
+
+            resultado = " Suerte para la próxima, el número era  " + numeroComputadora;
+
+        }
+
+        return (resultado);
+    }
+
+
+    document.write("<h1>");
+    document.write("Programa para que adivines un número generado por la computadora");
+    document.write("</h1>");
+    saltarLinea();
+
+    var numeroComputadora = Math.round(Math.random()*10);
+    var nombre            = prompt("¿Como te llamas?");
+    var numeroUsuario     = Number.parseInt(prompt(nombre + ", ¿Cuál es tu número en el rango de 0 - 10 ?"));
+
+    resultadoAdivina = adivinarNumero(numeroUsuario,numeroComputadora);
+    
+    imprimeResultados(resultadoAdivina);
+    
+    
+  </script>  

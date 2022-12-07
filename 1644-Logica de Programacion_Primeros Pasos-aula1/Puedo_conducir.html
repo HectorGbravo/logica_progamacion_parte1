@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>¿Puedo conducir?</title>
+</head>
+
+<script type="text/javascript">
+
+
+    function saltarLinea () {
+
+        document.write("<br><br>");
+    }
+
+         
+    function imprimeResultados(salida) {
+        
+        document.write(salida);
+        saltarLinea();
+    }
+
+	function puedesConducir(edad,tieneLicencia) {
+
+		if (edad > 18 && tieneLicencia == "S") {
+
+			conduce = "Si puedes conducir, Felicidades !!!"
+
+		} else {
+
+			conduce = "Lo siento, no cumples los requisitos para conducir"
+		}
+
+		return (conduce);
+	}
+
+
+   	document.write("<h1>");
+    document.write("Programa para saber si cumples los requisitos para conducir");
+    document.write("</h1>");
+    saltarLinea();
+
+    var edad          = parseInt(prompt("¿Cuál es tu edad?"));
+    var tieneLicencia = prompt("¿Tienes licencia? Responde S o N");
+
+    imprimeResultados(puedesConducir(edad,tieneLicencia));
+
+</script>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>Generador de tablas de multiplicar</title>
+</head>
+
+<script type="text/javascript">
+
+
+    function saltarLinea () {
+
+        document.write("<br><br>");
+    }
+
+         
+    function imprimeResultados(salida) {
+        
+        document.write(salida);
+        saltarLinea();
+    }
+
+
+
+    document.write("<h2>");
+    document.write("Programa que calcula tablas de multiplicar");
+    document.write("</h2>");
+    saltarLinea();
+
+    
+    var nombre        = prompt("¿Como te llamas?");
+    var numeroTabla   = Number.parseInt(prompt(nombre + ", dame un número para generar una tabla de multiplicar:  "));
+    var numeroMaximo  = 10;
+    var iteraccion    = 1
+
+    for (iteraccion; iteraccion <= numeroMaximo; iteraccion++) {
+
+        iteraTabla = numeroTabla * iteraccion;
+    
+        imprimeResultados((numeroTabla) + " x " + (iteraccion) + " = " + (iteraTabla));
+    
+    }
+
+    
+    
+    
+  </script>  

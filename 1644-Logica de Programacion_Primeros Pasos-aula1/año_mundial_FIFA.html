@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>Años que la FIFA celebró mundiales</title>
+</head>
+
+<script type="text/javascript">
+
+
+    function saltarLinea () {
+
+        document.write("<br><br>");
+    }
+
+         
+    function imprimeResultados(salida) {
+        
+        document.write(salida);
+        saltarLinea();
+    }
+
+
+
+    document.write("<h2>");
+    document.write("Programa que muestra los mundiales que ha celebrado FIFA por un año determinado");
+    document.write("</h2>");
+    saltarLinea();
+
+    
+    var nombre       = prompt("¿Como te llamas?");
+    var numeroMaximo = Number.parseInt(prompt(nombre + ", ¿Cuál es el año máximo a visualizar (Mayor a 1930)? "));
+    var anhoMundial  = 1930;
+    var mundialesCelebrados = 1
+
+    while (anhoMundial <= numeroMaximo) {
+
+        if (anhoMundial != 1942 && anhoMundial != 1946) {
+
+            imprimeResultados("Hubo mundial de la FIFA en el año " + (anhoMundial));
+        }
+
+        anhoMundial = anhoMundial + 4;
+        mundialesCelebrados = mundialesCelebrados + 1
+    }
+
+    imprimeResultados("Se celebraron " + (mundialesCelebrados) + " mundiales hasta el año que indicaste " + nombre);
+    
+    
+  </script>  

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>Document</title>
+</head>
+
+<h3>¿Alcohol o gasolina?</h3>
+
+<script type="text/javascript">
+    var tanqueAuto = 40;    
+    var consumoTotalGasolina = 480;
+    var consumoTotalAlcohol = 300;
+    eficienciaGasolina = consumoTotalGasolina / tanqueAuto;
+    eficienciaAlcohol  = consumoTotalAlcohol / tanqueAuto;
+
+    document.write("La eficiencia de un vehículo a gasolina que recorre " + consumoTotalGasolina + " kms con un tanque de " + tanqueAuto + " litros es de: " + eficienciaGasolina + " km/litro" );
+    document.write("<br>");
+    document.write("<br>");
+    document.write("La eficiencia de un vehículo con alcohol que recorre " + consumoTotalAlcohol + " kms con un tanque de " + tanqueAuto + " litros es de: " + eficienciaAlcohol + " km/litro" );
+</script>

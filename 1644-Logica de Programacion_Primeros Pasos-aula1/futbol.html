@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>Cálculo del Puntos Soccer</title>
+</head>
+
+<script type="text/javascript">
+
+    function saltarLinea () {
+
+        document.write("<br><br>");
+    }
+
+         
+    function calcularPuntosTotales (victorias,empates) {
+
+        puntosTotales = victorias * 3 + empates;
+
+        return (puntosTotales);
+
+    }
+
+    function imprimeResultados(salida) {
+        
+        document.write(salida);
+        saltarLinea();
+    }
+
+    function compararTemporadaAnterior(puntosAnt,puntosTotales) {
+
+        if (puntosTotales > puntosAnt) {
+
+            comparacion = "mejor";
+        }
+        
+        if (puntosTotales < puntosAnt) {
+
+            comparacion = "peor";
+
+        }
+
+        if (puntosTotales == puntosAnt) {
+
+            comparacion = "igual"
+        }
+
+        return (comparacion);
+    }
+
+
+    document.write("<h1>");
+    document.write("Programa para calcular los puntos totales de un equipo de Soccer");
+    document.write("</h1>");
+    saltarLinea();
+
+    var nombre    = prompt("¿Como se llama tu equipo?");
+    var victorias = parseInt(prompt("¿Cuantas victorias tuvo " + nombre + " ?"));
+    var empates   = parseInt(prompt("¿Cuantos empates   tuvo " + nombre + " ?"));
+    var puntosAnt = parseInt(prompt("¿Cuantos puntos    tuvo " + nombre + " la temporada anterior?"));
+
+    puntosTotales = calcularPuntosTotales(victorias,empates)
+    
+    imprimeResultados("El equipo " + nombre + " tiene un total en esta temporada de:  " + (puntosTotales) + " puntos");
+
+    resultadoComparacion = compararTemporadaAnterior(puntosAnt,puntosTotales);
+
+    imprimeResultados("el equipo " + nombre + " estuvo " + resultadoComparacion + " que la temporada anterior, donde obtuvo " + (puntosAnt) + " puntos");
+
+
+
+    
+  </script>  

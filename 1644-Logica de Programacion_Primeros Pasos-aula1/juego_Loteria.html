@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>Juego de Lotería</title>
+</head>
+
+<script type="text/javascript">
+
+
+    function saltarLinea () {
+
+        document.write("<br><br>");
+    }
+
+         
+    function imprimeResultados(salida) {
+        
+        document.write(salida);
+        saltarLinea();
+    }
+
+
+    function sorteo(numeroMaximo) {
+
+        numeroGenerado = Math.round(Math.random()*numeroMaximo); 
+        return (numeroGenerado);
+    }
+
+    function adivinarNumero(numeroUsuario,numeroComputadora) {
+
+        if (numeroUsuario == numeroComputadora) {
+
+            resultado = " Acertaste, efectivamente el número era " + numeroComputadora;
+
+        } else {
+
+            resultado = " Suerte para la próxima, el número era  " + numeroComputadora;
+
+        }
+
+        return (resultado);
+    }
+
+
+    document.write("<h2>");
+    document.write("Programa de Lotería para que adivines un número aleatorio generado por la computadora");
+    document.write("</h2>");
+    saltarLinea();
+
+    
+    var nombre            = prompt("¿Como te llamas?");
+    var numeroMaximo      = Number.parseInt(prompt(nombre + ", cual es tu límite superior para que adivines un número "));
+    var numeroUsuario     = Number.parseInt(prompt(nombre + ", ¿Cuál es tu número en el rango de 0 - " + (numeroMaximo) + " ?"));
+    var numeroComputadora = sorteo(numeroMaximo);  
+
+    resultadoAdivina = adivinarNumero(numeroUsuario,numeroComputadora);
+    
+    imprimeResultados(resultadoAdivina);
+    
+    
+  </script>  

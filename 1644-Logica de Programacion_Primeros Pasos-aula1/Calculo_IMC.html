@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>Cálculo del IMC</title>
+</head>
+
+<script type="text/javascript">
+
+    function saltarLinea () {
+
+        document.write("<br><br>");
+    }
+
+         
+    function calcularImc (peso,altura) {
+
+        imc = peso / (altura * altura);
+        return (imc);
+
+    }
+
+    function mostrarImc(nombre,imc) {
+        
+        document.write("El IMC de "+ nombre + " actualmente es de:  " + (imc));
+        saltarLinea();
+    }
+
+    var nombre1 = "Héctor Gerardo";
+    var nombre2 = "Héctor Manuel";
+    var nombre3 = "Luis Gerardo";
+
+    document.write("<h1>");
+    document.write("Programa para calcular el IMC corporal");
+    document.write("</h1>");
+    saltarLinea();
+ 
+    imc1 = calcularImc(96,1.72);
+    imc2 = calcularImc(100,1.75);
+    imc3 = calcularImc(75,1.75);
+
+    mostrarImc(nombre1,imc1);
+    mostrarImc(nombre2,imc2);
+    mostrarImc(nombre3,imc3);
+
+    promedioImc = (imc1 + imc2 + imc3) / 3
+    
+    document.write("El promedio de los tres es de: " + (promedioImc));
+
+
+    
+  </script>  

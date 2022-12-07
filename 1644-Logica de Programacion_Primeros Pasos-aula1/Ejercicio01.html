@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>Cálculo de edades 1</title>
+</head>
+
+<script type="text/javascript">
+
+    function saltarLinea () {
+
+        document.write("<br><br>");
+    }
+
+    function mostrarNac(nombre, anhoNac) {
+
+        document.write(nombre + " nacio en el año de: " + anhoNac);
+        saltarLinea();
+
+    } 
+
+    function mostrarEdad(nombre,anhoActual,anhoNac) {
+        edad = anhoActual - anhoNac
+        document.write("La edad de "+ nombre + " actualmente es de:  " + (edad));
+        saltarLinea();
+    } 
+
+    var anho = 2022
+    var nombre1 = "Héctor Gerardo"
+    var nombre2 = "Héctor Manuel"
+    var nombre3 = "Luis Gerardo"
+
+    document.write("Actualmente estamos en el año:  " + (anho));
+    saltarLinea();
+ 
+    mostrarEdad(nombre1,anho,1970);
+    
+    mostrarNac(nombre1,1970);
+
+    mostrarEdad(nombre2,anho,1994);
+    
+    mostrarNac(nombre2,1994);
+
+    mostrarEdad(nombre3,anho,1996);
+    
+    mostrarNac(nombre3,1996);
+    
+    
+
+    //promedioEdad = (edadHector+edadManuel+edadLuis)/3;
+
+    //document.write("El promedio de edades de " + nombre1 + ", " + nombre2 + " y " + nombre3 + " es de: " + Math.round(promedioEdad));
+    //saltarLinea();
+
+
+
+
+</script>
+
+
+<script>
+    document.write("<br>");
+    document.write(12 + " años");
+</script>
+
+
+<script>
+    document.write("<br>");
+    document.write("Mi edad es " + 12);
+</script>
+
+
+<script>
+    document.write("<br>");
+    document.write("Media calculada " + 20);
+</script>
+
+
+<script>
+    document.write("<br>");
+    document.write(10 + 20);
+</script>
+
+
+<script>
+    document.write("Estoy escribiendo desde el mundo JavaScript en el mundo HTML");
+</script>
+

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>Cálculo del IMC</title>
+</head>
+
+<script type="text/javascript">
+
+    function saltarLinea () {
+
+        document.write("<br><br>");
+    }
+
+         
+    function calcularImc (peso,altura) {
+
+        imc = peso / (altura * altura);
+        return (imc);
+
+    }
+
+    function mostrarImc(nombre,imc) {
+        
+        document.write(nombre + ", tu IMC de actualmente es de:  " + (imc));
+        saltarLinea();
+    }
+
+
+    document.write("<h1>");
+    document.write("Programa para calcular el IMC corporal");
+    document.write("</h1>");
+    saltarLinea();
+
+    var nombre = prompt("Por favor, dime como te llamas");
+    var peso   = prompt(nombre + ", ¿Cuánto pesas?");
+    var altura = prompt(nombre + ", ¿Cuánto mides?");
+ 
+    mostrarImc(nombre,calcularImc(peso,altura));
+
+
+
+    
+  </script>  
