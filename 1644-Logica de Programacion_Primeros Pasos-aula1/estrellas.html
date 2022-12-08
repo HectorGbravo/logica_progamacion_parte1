@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>Programa Estrellas - repite caracteres</title>
+</head>
+
+<script type="text/javascript">
+
+
+    function saltarLinea (numeroSaltos) {
+
+        for (var saltos = 1; saltos <= numeroSaltos; saltos++) {
+
+            document.write("<br>");    
+
+        }
+        
+    }
+
+         
+    function imprimeResultados(salida) {
+        
+        document.write(salida);
+        
+    }
+
+
+    function repiteCaracteres(caracterAlfa,filas,columnas) {
+
+        for (var numeroFilas = 1; numeroFilas <= filas; numeroFilas++) {
+
+            for(var numeroColumnas = 1; numeroColumnas <= columnas; numeroColumnas++) {
+
+                imprimeResultados(caracterAlfa);
+
+            }
+
+            saltarLinea(1);
+        }
+    }
+
+
+    document.write("<h1>");
+    document.write("Programa que genera filas y columnas de un caracter especificado por el usuario");
+    document.write("</h1>");
+    saltarLinea();
+
+    
+    var nombre            = prompt("¿Como te llamas?");
+    var caracterAlfa      = (prompt(nombre + ", ¿Que caracter quieres repetir?"));
+    var filas             = Number.parseInt(prompt(nombre + ", ¿Cuantas filas?"));
+    var columnas          = Number.parseInt(prompt(nombre + ", ¿Cuantas columnas?"));
+    
+    imprimeResultados(nombre + ", a continuación te muestro el caracter: " + caracterAlfa + " con una dimensión de " + (filas) + " filas por " + (columnas) + " columnas " );
+    saltarLinea(3);
+    repiteCaracteres(caracterAlfa,filas,columnas);
+    saltarLinea(2);
+    imprimeResultados("FIN");
+    
+
+  </script>  
