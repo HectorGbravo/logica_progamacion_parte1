@@ -27,15 +27,18 @@
 
         if (numeroUsuario == numeroComputadora) {
 
-            resultado = " Acertaste, efectivamente el número era " + numeroComputadora;
+            alert(" Acertaste, efectivamente el número era " + numeroComputadora);
+            flag = true
 
         } else {
 
-            resultado = " Suerte para la próxima, el número era  " + numeroComputadora;
+            alert("No acertaste, lo siento");
+            flag = false
 
         }
 
-        return (resultado);
+        return (flag);
+        
     }
 
 
@@ -46,11 +49,24 @@
 
     var numeroComputadora = Math.round(Math.random()*10);
     var nombre            = prompt("¿Como te llamas?");
-    var numeroUsuario     = Number.parseInt(prompt(nombre + ", ¿Cuál es tu número en el rango de 0 - 10 ?"));
+    var oportunidades     = Number.parseInt(prompt(nombre + ", ¿Cuantas oportunidades quieres?"));
+    var contador          = 1
 
-    resultadoAdivina = adivinarNumero(numeroUsuario,numeroComputadora);
     
-    imprimeResultados(resultadoAdivina);
+    while (contador <= oportunidades) {
+
+        numeroUsuario = Number.parseInt(prompt("Oportunidad No. " + (contador) + ": " + nombre + ", ¿Cuál es tu número en el rango de 0 - 10 ?"));    
+        resultadoAdivina = adivinarNumero(numeroUsuario,numeroComputadora);
+        
+        if (resultadoAdivina) {
+            break;
+        } else {
+            contador++;
+        }
     
+    }
     
+    imprimeResultados("El número generado por la computadora es:  " + (numeroComputadora));
+    imprimeResultados("FIN");
+    ZZ
   </script>  
