@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>Programa Simulador inicio de sesión con tres intentos</title>
+</head>
+
+<script type="text/javascript">
+
+
+    function saltarLinea (numeroSaltos) {
+
+        for (var saltos = 1; saltos <= numeroSaltos; saltos++) {
+
+            document.write("<br>");    
+
+        }
+        
+    }
+
+         
+    function imprimeResultados(salida) {
+        
+        document.write(salida);
+        
+    }
+
+
+
+    var inicioDeSesionRegistrado = "alura";
+    var contrasenhaRegistrada = "alura321";
+
+    
+
+    for (var intentos = 1; intentos <= 3; intentos++) {
+
+        var inicioDeSesionIngresado = prompt("Ingrese su usuario");
+        var contrasenhaIngresada = prompt("Ingrese su contraseña");
+
+        if( inicioDeSesionRegistrado == inicioDeSesionIngresado && contrasenhaRegistrada == contrasenhaIngresada ) {
+            
+            alert("Bienvenido al sistema " + inicioDeSesionIngresado);
+            break;
+
+        } else {
+
+            if (intentos == 3) {
+
+                alert("No puedes accesar al sistema, no conoces las credenciales necesarias !!!");
+                break;
+            }
+
+            alert("inicio de sesión inválido. Te quedan " + (3 - intentos) + " intentos");
+
+        }
+    }
+
+    imprimeResultados("FIN")
+    
+
+
+
+</script>
+
+    
+
+ 
