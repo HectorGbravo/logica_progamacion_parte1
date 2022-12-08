@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>Programa Recetas de Armando</title>
+</head>
+
+
+
+<h1>Recetas de Armando</h1>
+
+<script>
+
+    var ingredientes = [];
+    var cantidad = parseInt(prompt("¿Cuántos ingredientes vas a añadir?"));
+    var contador = 1;
+
+    yaExisteIngrediente = false;
+    while( contador <= cantidad) {
+        var ingrediente = prompt("Informe el ingrediente " + contador);
+
+        if(contador == 0) {
+
+            ingredientes.push(ingrediente);
+            contador++;
+
+        } else {
+
+            if(contador >0) {
+                
+                yaExisteIngrediente = (ingredientes.includes(ingrediente));
+    
+                if(yaExisteIngrediente) {
+
+                    alert("Ya existe el ingrediente " + ingrediente + " en la lista, introduzca otro ingrediente diferente");
+                    // contador--;
+
+                } else {
+
+                    ingredientes.push(ingrediente);
+                    contador++;            
+                }
+            }
+        }
+        
+    }
+
+    document.write("Los ingredientes de la receta introducida son: "+ ingredientes.sort());
+
+
+</script>
+
+    
+
+ 
